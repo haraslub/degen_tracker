@@ -53,41 +53,41 @@ The output file name is in form your-address_network-ticker_YYYY-MM-DD.xlsx. The
 
 In this section, you can find description of the columns in the output file.
 
-**full_data sheet**
+**Full_data sheet**
 
-- Token Symbol = the ticker of the given token;
-- A = final assessment regarded to token operations used for the final calculation and conditional formatting in the output file. Assessments:
+- **Token Symbol** = the ticker of the given token;
+- **A** = final assessment regarded to token operations used for the final calculation and conditional formatting in the output file. Assessments:
   - C = completed; the result operation is considered in the final calculation (see the sheet overview);
   - O = open; the result of operation is not considered in the final calculation as the trade has not been closed yet;
   - U = uncompleted; the result of operation is not considered in the final calculation although the trade has already been closed but there is missing data. Data needs to be revisited, filled in, and then state can be changed to "C" value in order to include changes in the final calculation.
-- Token Direction = direction of the token - two possible directions:
+- **Token Direction** = direction of the token - two possible directions:
   - IN = tokens were sent to the wallet,
   - OUT = tokens were sent out of the wallet).
-- Unix Timestamp = Unix Timestamp of the transaction.
-- Value = the amount of tokens included in the transaction; if Token Direction is OUT, the value is negative.
-- Token Balance Before = the token balance before the execution of the transaction.
-- Token Balance After = the token balance after the execution of the transaction.
-- ETH IN = value is non zero if ETH (or other L1 coins depending on the given network) was sent to the account in the transaction.
-- ETH OUT = value is non zero if ETH (or other L1 coins depending on the given network) was sent from the account in the transaction.
-- ETH USD = the price of ETH (or other L1 coins depending on the given network) in the time of the transaction.
-- Method = the name of the method (type of token operation) used in the transaction.
-- Event = an Event assigned based on the type of transaction; all events are defined in config.py.
-- USD price = price of the purchase/sale of transaction if known.
-- USD state = the cashflow of the trade of the given token at the given time, i.e. each token is evaluated separately.
-- Status = status of the operation. Can be:
+- **Unix Timestamp** = Unix Timestamp of the transaction.
+- **Value** = the amount of tokens included in the transaction; if Token Direction is OUT, the value is negative.
+- **Token Balance Before** = the token balance before the execution of the transaction.
+- **Token Balance After** = the token balance after the execution of the transaction.
+- **ETH IN** = value is non zero if ETH (or other L1 coins depending on the given network) was sent to the account in the transaction.
+- **ETH OUT** = value is non zero if ETH (or other L1 coins depending on the given network) was sent from the account in the transaction.
+- **ETH USD** = the price of ETH (or other L1 coins depending on the given network) in the time of the transaction.
+- **Method** = the name of the method (type of token operation) used in the transaction.
+- **Event** = an Event assigned based on the type of transaction; all events are defined in config.py.
+- **USD price** = price of the purchase/sale of transaction if known.
+- **USD state** = the cashflow of the trade of the given token at the given time, i.e. each token is evaluated separately.
+- **Status** = status of the operation. Can be:
   - OPEN = the trade has not been closed yet;
   - UNCLEAR = there is missing data, the transaction has to be revised by user;
   - CLOSED = the trade has been closed, i.e. value in Token Balance After column reached 0;
   - STABLES = the trade relates to stables (and it is not considered for further calculations).
-- Hyperlink = hyperlink to the transaction.
+- **Hyperlink** = hyperlink to the transaction.
 
-**overview sheet**
+**Overview sheet**
 
-- Profit brutto: sum of all transaction with CLOSED value in the Status column and with C value in the S column in the given time (see Date from, Date to)
-- Fees: sum of all transaction fees in the given time (see Date from, Date to)
-- Profit netto: Profit brutto - Fees
-- Date from: Date of the beginning of the taxable period (including)
-- Date to: Date of the the end of the taxable period (excluding)
+- **Profit brutto:** sum of all transaction with CLOSED value in the Status column and with C value in the S column in the given time (see Date from, Date to)
+- **Fees:** sum of all transaction fees in the given time (see Date from, Date to)
+- **Profit netto:** Profit brutto - Fees
+- **Date from:** Date of the beginning of the taxable period (including)
+- **Date to:** Date of the the end of the taxable period (excluding)
 
 ## Manual / Handling missing data
 
@@ -105,7 +105,7 @@ In this section, you can find description of the columns in the output file.
 
 ### Working with the output file
 
-A) PRICE IS NOT KNOWN -> MISSING DATA -> ASSESSMENT: UNCOMPLETED
+**A) PRICE IS NOT KNOWN -> MISSING DATA -> ASSESSMENT: UNCOMPLETED**
 
 In the picture below, you can see four transactions of EXMPL1 token. The second transaction is missing USD price, thus all operations with tokens are assessed as UNCLEAR (see value "U" in the column "S"). In order to fix it, user needs to:
 
@@ -118,13 +118,13 @@ In the picture below, you can see four transactions of EXMPL1 token. The second 
 
 ![EXMPL1: After manual revision](/img/EXMPL1_02.PNG)
 
-B) OPENED TRADE -> ASSESSMENT: OPEN
+**B) OPENED TRADE -> ASSESSMENT: OPEN**
 
 The example of open trade can be seen in the picture below. The trade consists of three operations so far. You can see "NOT DEFINED" (and MISSING DATA in the column USD price) event is in the second transaction. In this case it is not obvious if the tEXMPL2 (Tokemak t Asset) will be traded, transferred, or reclaimed in the future. This trade is not included in the final calculation (sheet overview).
 
 ![EXMPL2: Open trade](/img/EXMPL2_01.PNG)
 
-C) ALL DATA AVAILABLE -> ASSESSMENT UNCOMPLETED AND OPEN
+**C) ALL DATA AVAILABLE -> ASSESSMENT UNCOMPLETED AND OPEN**
 
 In the pictures below you can see two assessments. The first transaction is assessed as OPEN, the second and the third transactions are assessed as UNCOMPLETED. What happened here is that the project with token EXMPL3 was rugged, thus it distributed a new coin with the same ticker. Hence, the following procedure can be used:
 
@@ -137,13 +137,13 @@ In the pictures below you can see two assessments. The first transaction is asse
 
 ![EXMPL3: After manual revision](/img/EXMPL3_02.PNG)
 
-D) ALL DATA AVAILABLE -> ASSESSMENT: COMPLETED
+**D) ALL DATA AVAILABLE -> ASSESSMENT: COMPLETED**
 
 This trade represents an aidrop (transaction one) and its sale to DAI token. All data are available, thus trade can be assessed as COMPLETED and no further actions are required.
 
 ![EXMPL2: Closed trade](/img/EXMPL4_01.PNG)
 
-E) OVERVIEW SHEET
+**E) OVERVIEW SHEET**
 
 The final calculation can be seen in the sheet "overview". In the pictures below, you can see overview list before all adjustments were made in the steps A-D and after that. I believe that formulas used in the \*.xlsx file are self-explanatory.
 
