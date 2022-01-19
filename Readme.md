@@ -115,8 +115,7 @@ In the picture below, you can see four transactions of EXMPL1 token. The second 
 - change the value "U" to "C" to all transactions.
   Once this is done (see the pictures below), the whole operations regarded to the token will be included in the final calculation (sheet overview).
 
-![alt text][exmpl1_1]
-[EXMPL1_1]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL1_01.PNG "EXMPL1: Before manual revision"
+![EXMPL1: Before manual revision](https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL1_01.PNG)
 
 ![alt text][exmpl1_2]
 [EXMPL1_2]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL1_02.PNG "EXMPL1: After manual revision"
