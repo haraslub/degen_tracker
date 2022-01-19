@@ -6,7 +6,7 @@ This is my first Python open source project and it is very likely full of bad pr
 
 ## Overview
 
-Motivation to create Degen Tracker was to facilitate processing transactions over different networks. Unfortunately, I could not find any app which would be reliable enough and which would provide me with the good user experience and simultaneously have good access to data to be able to check them. As used to working with MS Excel, I decided to process transaction data from etherscan (or other networks' scans) and export them to the \*.xlsx file (output file) in which then I could work easily. The process is not fully automated, there are already known **bugs**. Thus, **user is always supposed to revise the whole report!**.
+Motivation to create Degen Tracker was to facilitate processing transactions over different networks. Unfortunately, I could not find any app which would be reliable enough and which would provide me with the good user experience and simultaneously have good access to data to be able to check them. As used to working with MS Excel, I decided to process transaction data from etherscan (or other networks' scans) and export them to the \*.xlsx file (output file) in which then I could work easily. The process is not fully automated, there are already known **bugs**. Thus, **user is always supposed to revise the whole report!**
 
 ## Requirements
 
