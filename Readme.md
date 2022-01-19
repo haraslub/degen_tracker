@@ -116,17 +116,17 @@ In the picture below, you can see four transactions of EXMPL1 token. The second 
   Once this is done (see the pictures below), the whole operations regarded to the token will be included in the final calculation (sheet overview).
 
 ![alt text][exmpl1_1]
-[EXMPL1_1]: https://github.com/haraslub/degen_tracker/master/tree/img/EXMPL1_01.PNG "EXMPL1: Before manual revision"
+[EXMPL1_1]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL1_01.PNG "EXMPL1: Before manual revision"
 
 ![alt text][exmpl1_2]
-[EXMPL1_2]: https://github.com/haraslub/degen_tracker/img/EXMPL1_02.PNG "EXMPL1: After manual revision"
+[EXMPL1_2]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL1_02.PNG "EXMPL1: After manual revision"
 
 B) OPENED TRADE -> ASSESSMENT: OPEN
 
 The example of open trade can be seen in the picture below. The trade consists of three operations so far. You can see "NOT DEFINED" (and MISSING DATA in the column USD price) event is in the second transaction. In this case it is not obvious if the tEXMPL2 (Tokemak t Asset) will be traded, transferred, or reclaimed in the future. This trade is not included in the final calculation (sheet overview).
 
 ![alt text][exmpl2_1]
-[EXMPL2_1]: https://github.com/haraslub/degen_tracker/img/EXMPL2_01.PNG "EXMPL2: Open trade"
+[EXMPL2_1]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL2_01.PNG "EXMPL2: Open trade"
 
 C) ALL DATA AVAILABLE -> ASSESSMENT UNCOMPLETED AND OPEN
 
@@ -138,27 +138,27 @@ In the pictures below you can see two assessments. The first transaction is asse
   After this procedure was applied, the trade will be included in the final calculation (sheet overview).
 
 ![alt text][exmpl3_1]
-[EXMPL3_1]: https://github.com/haraslub/degen_tracker/img/EXMPL3_01.PNG "EXMPL3: Before manual revision"
+[EXMPL3_1]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL3_01.PNG "EXMPL3: Before manual revision"
 
 ![alt text][exmpl3_2]
-[EXMPL3_2]: https://github.com/haraslub/degen_tracker/img/EXMPL3_02.PNG "EXMPL3: After manual revision"
+[EXMPL3_2]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL3_02.PNG "EXMPL3: After manual revision"
 
 D) ALL DATA AVAILABLE -> ASSESSMENT: COMPLETED
 
 This trade represents an aidrop (transaction one) and its sale to DAI token. All data are available, thus trade can be assessed as COMPLETED and no further actions are required.
 
 ![alt text][exmpl4_1]
-[EXMPL4_1]: https://github.com/haraslub/degen_tracker/img/EXMPL4_01.PNG "EXMPL2: Closed trade"
+[EXMPL4_1]: https://github.com/haraslub/degen_tracker/tree/master/img/EXMPL4_01.PNG "EXMPL2: Closed trade"
 
 E) OVERVIEW SHEET
 
 The final calculation can be seen in the sheet "overview". In the pictures below, you can see overview list before all adjustments were made in the steps A-D and after that. I believe that formulas used in the \*.xlsx file are self-explanatory.
 
 ![alt text][final_before]
-[FINAL_BEFORE]: https://github.com/haraslub/degen_tracker/img/FINAL_BEFORE.PNG "Final calculation before adjustments"
+[FINAL_BEFORE]: https://github.com/haraslub/degen_tracker/tree/master/img/FINAL_BEFORE.PNG "Final calculation before adjustments"
 
 ![alt text][final_after]
-[FINAL_AFTER]: https://github.com/haraslub/degen_tracker/img/FINAL_AFTER.PNG "Final calculation after adjustments"
+[FINAL_AFTER]: https://github.com/haraslub/degen_tracker/tree/master/img/FINAL_AFTER.PNG "Final calculation after adjustments"
 
 ## Donation
 
